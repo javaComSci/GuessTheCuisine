@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 import pickle
-from logisticRegression import LogisticRegression
+import logisticRegression
 
 
 """
@@ -31,4 +31,5 @@ def splitData():
 
 if __name__ == "__main__":
     trainingX, trainingY, testingX, testingY = splitData()
-    model = LogisticRegression(trainingX, trainingY, testingX, testingY)
+    model = logisticRegression.LogisticRegression(trainingX, trainingY, testingX, testingY)
+    model.fit(0.05)

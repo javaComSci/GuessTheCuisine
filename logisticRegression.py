@@ -11,4 +11,12 @@ class LogisticRegression:
         self.trainingY = trainingY
         self.testingX = testingX
         self.testingY = testingY
+        self.theta = [0] * len(trainingX.columns)
+    
+    
+    """
+        Fit the parameters of the model given the learning rate
+    """
+    def fit(self, learningRate):
+        print(self.theta)
     
