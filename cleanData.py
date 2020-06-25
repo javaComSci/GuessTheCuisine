@@ -16,7 +16,7 @@ def readData():
     # print(df["cuisine"].value_counts())
 
     # change categorical values to be numeric
-    cleanupNums = {"cuisine": {"korean": 0, "indian": 1, "chinese": 2, "japanese": 3, "thai": 4}}
+    cleanupNums = {"cuisine": {"korean": 1, "indian": 0, "chinese":1, "japanese": 1, "thai": 1}}
     df.replace(cleanupNums, inplace=True)
     
     # print(df)

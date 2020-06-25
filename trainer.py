@@ -32,4 +32,8 @@ def splitData():
 if __name__ == "__main__":
     trainingX, trainingY, testingX, testingY = splitData()
     model = logisticRegression.LogisticRegression(trainingX, trainingY, testingX, testingY)
-    model.fitWithCrossValidation(0.01)
+    model.fitWithCrossValidation(0.05)
+    accuracy = model.getAccuracy(trainingX, trainingY)
+    print("TRAINING ACCURACY", accuracy)
+    accuracy = model.getAccuracy(testingX, testingY)
+    print("TESTING ACCURACY", accuracy)
