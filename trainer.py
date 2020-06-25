@@ -32,4 +32,4 @@ def splitData():
 if __name__ == "__main__":
     trainingX, trainingY, testingX, testingY = splitData()
     model = logisticRegression.LogisticRegression(trainingX, trainingY, testingX, testingY)
-    model.fitWithCrossValidation(0.05)
+    model.fitWithCrossValidation(0.01)
