@@ -23,7 +23,7 @@ def splitData():
     trainingY = df.iloc[:,0][:trainingSize]
     testingX = df.loc[:, df.columns != "cuisine"][trainingSize + 1:]
     testingY = df.iloc[:,0][trainingSize + 1:]
-    print(len(testingY), testingY)
+    # print(len(testingY), testingY)
 
     return trainingX, trainingY, testingX, testingY
 
@@ -32,4 +32,4 @@ def splitData():
 if __name__ == "__main__":
     trainingX, trainingY, testingX, testingY = splitData()
     model = logisticRegression.LogisticRegression(trainingX, trainingY, testingX, testingY)
-    model.fit(0.05)
+    model.fitWithCrossValidation(0.05)
